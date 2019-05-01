@@ -16,30 +16,36 @@ $module = ExternalModules::getModuleInstance($prefix, $version);
 // $pids = $module->framework->getProjectsWithModuleEnabled($pid);
 $pid = 25;
 
-function sendCSV() {
+function z($array, $path="") {
+	global $arrs;
+	
+	foreach($array as $key => $val) {
+		$path = $key
+	}
+}
+
+function export() {
 	global $module;
 	global $pid;
 	$settings = $module->framework->getProjectSettings($pid);
-	
-	// echo("<pre>");
-	// print_r($settings);
-	// echo("</pre>");
-	
 	$arrs = [];
-	$fields = array_unshift(array_keys($settings), "keys");
+	$fields = array_keys($settings);
+	array_unshift($fields, "keys");
 	$arrs[] = $fields;
 	
-	// recurse through settings to 
+	z($settings
 	
-	// $output = fopen("php://output",'w');
 	// $filename = "testCSV.json";
 	// header("Content-Type:application/json"); 
 	// header("Content-Disposition:attachment;filename=$filename"); 
-	// fputcsv($output,
-	// fclose($output);
+	$output = fopen("php://output",'w');
+	foreach($arrs as $arr) {
+		fputcsv($output, $arr);
+	}
+	fclose($output);
 }
 
 // echo("<pre>");
 // echo("</pre>");
 
-sendCSV();
+export();
