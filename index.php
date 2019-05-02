@@ -1,51 +1,58 @@
-<?php
-require_once("../../redcap_connect.php");
-use \ExternalModules\ExternalModules;
-
-$prefix = $_GET['prefix'];
-if(empty($prefix)){
-	throw new Exception("Please supply a 'prefix' parameter for this page.");
-}
-$version = ExternalModules::getSystemSetting($prefix, ExternalModules::KEY_VERSION);
-if(empty($version)){
-	throw new Exception("The module with prefix '$prefix' is currently disabled systemwide.");
-}
-
-$module = ExternalModules::getModuleInstance($prefix, $version);
-
-// $pids = $module->framework->getProjectsWithModuleEnabled($pid);
-$pid = 25;
-
-function z($array, $path="") {
-	global $arrs;
-	
-	foreach($array as $key => $val) {
-		$path = $key
-	}
-}
-
-function export() {
-	global $module;
-	global $pid;
-	$settings = $module->framework->getProjectSettings($pid);
-	$arrs = [];
-	$fields = array_keys($settings);
-	array_unshift($fields, "keys");
-	$arrs[] = $fields;
-	
-	z($settings
-	
-	// $filename = "testCSV.json";
-	// header("Content-Type:application/json"); 
-	// header("Content-Disposition:attachment;filename=$filename"); 
-	$output = fopen("php://output",'w');
-	foreach($arrs as $arr) {
-		fputcsv($output, $arr);
-	}
-	fclose($output);
-}
-
-// echo("<pre>");
-// echo("</pre>");
-
-export();
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="css/base.css">
+		<title>Module Settings Import/Export</title>
+	</head>
+	<body>
+		<div id="export">
+			<h2>Export</h2>
+			<form>
+				<p>Select a module:</p>
+				<select id="moduleSelect" name="modulePrefix">
+					<?php
+						define("NOAUTH", true);
+						require_once("../../redcap_connect.php");
+						use \ExternalModules\ExternalModules;
+						
+						$modules = ExternalModules::getEnabledModules();
+						
+						// add blank select option
+						echo("
+					<option value=''></option>");
+						
+						// add an option for each module
+						foreach ($modules as $prefix => $version) {
+							$config = ExternalModules::getConfig($prefix, $version, NULL);
+							if (empty($config)) continue;
+							echo("
+					<option value='$prefix'>{$config['name']}</option>");
+						}
+					?>
+				</select>
+				<div class="hidden">
+					<p>Select a project:</p>
+					<select id="projectSelect" name="project"></select>
+					<button type="button" onclick="exportCSV">Export to .CSV</button>
+				</div>
+			</form>
+		</div>
+		<div id="import">
+			<h2>Import</h2>
+			<form>
+				<p>Choose a settings file (.csv):</p>
+				<input type="file" name="settingsFile" id="settingsFile">
+				<button type="button" onclick="import">Import .CSV</button>
+			</form>
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+	</body>
+</html>

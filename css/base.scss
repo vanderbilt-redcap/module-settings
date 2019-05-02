@@ -1,0 +1,43 @@
+// recompile command (in git bash in plugins/nitin folder):
+//sass.bat css/base.scss css/base.css
+
+// @import "C:/UniServerZ/www/redcap/plugins/nitin/css/_normalize.scss";
+@import "_normalize.scss";
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 600px;
+	div, form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+}
+
+body > div {
+	padding: 0px 60px 0px 60px;
+}
+
+select {
+	width: 400px;
+}
+
+#export {
+	border-right: 1px solid black;
+}
+
+// form {
+	// display: flex;
+	// flex-direction: column;
+// }
+
+button {
+	margin: 20px;
+}
+
+.hidden {
+	display: none;
+}
