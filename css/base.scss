@@ -4,35 +4,36 @@
 // @import "C:/UniServerZ/www/redcap/plugins/nitin/css/_normalize.scss";
 @import "_normalize.scss";
 
-body {
+body, div {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 600px;
-	div, form {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
+}
+
+div {
+	width: 100%;
+}
+
+div.row {
+	flex-direction: row;
+}
+
+#select {
+	padding-top: 5%;
+	padding-bottom: 3%;
+	div {
+		padding-bottom: 20px;
 	}
 }
 
-body > div {
-	padding: 0px 60px 0px 60px;
+#import {
+	border-left: 1px solid black;
 }
 
 select {
-	width: 400px;
+	min-width: 200px;
 }
-
-#export {
-	border-right: 1px solid black;
-}
-
-// form {
-	// display: flex;
-	// flex-direction: column;
-// }
 
 button {
 	margin: 20px;

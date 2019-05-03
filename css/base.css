@@ -337,29 +337,35 @@ template {
   display: none;
 }
 
-body {
+body, div {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
-}
-body div, body form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-body > div {
-  padding: 0px 60px 0px 60px;
+div {
+  width: 100%;
+}
+
+div.row {
+  flex-direction: row;
+}
+
+#select {
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+#select div {
+  padding-bottom: 20px;
+}
+
+#import {
+  border-left: 1px solid black;
 }
 
 select {
-  width: 400px;
-}
-
-#export {
-  border-right: 1px solid black;
+  min-width: 200px;
 }
 
 button {

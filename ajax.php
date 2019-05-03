@@ -17,9 +17,32 @@ function z($array, $path="") {
 	}
 }
 
-function export() {
-	global $module;
-	global $pid;
+// sanitize POST
+$_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+$action = $_POST['action'];
+
+if ($action == "getProjects") {
+	// given module prefix, respond with list of <option>s = projects this module is enabled on
+	$prefix = $_POST['module'];
+	$version = ExternalModules::getSystemSetting($prefix, ExternalModules::KEY_VERSION);
+	if (empty($version)) {
+		exit("<option value=''>(selected module disabled on this system)</option>");
+	}
+	$module = ExternalModules::getModuleInstance($prefix, $version);
+	if (isset($module->framework)) {
+		$pids = $module->framework->getProjectsWithModuleEnabled();
+		$pids = array_map('optionizeElements', $pids);
+		array_unshift($pids, "<option value=''></option>");
+		exit(implode($pids, "\n"));
+	} else {
+		exit("<option value=''>(selected module not enabled on any projects)</option>");
+	}
+} elseif ($action == "export") {
+	$prefix = $_POST['prefix'];
+	$scope = $_POST['scope'];
+	$pid = $_POST['pid'];
+	
+	$module = ExternalModules::getModuleInstance($prefix, $version);
 	$settings = $module->framework->getProjectSettings($pid);
 	$arrs = [];
 	$fields = array_keys($settings);
@@ -36,28 +59,4 @@ function export() {
 		fputcsv($output, $arr);
 	}
 	fclose($output);
-}
-
-// sanitize POST
-$_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-$action = $_POST['action'];
-
-if ($action == "getProjects") {
-	// given module prefix, respond with list of <option>s = projects this module is enabled on
-	$prefix = $_POST['module'];
-	$version = ExternalModules::getSystemSetting($prefix, ExternalModules::KEY_VERSION);
-	if (empty($version)) {
-		exit("<option value=''>(selected module disabled on this system)</option>");
-	}
-	$module = ExternalModules::getModuleInstance($prefix, $version);
-	if (isset($module->framework)) {
-		$pids = $module->framework->getProjectsWithModuleEnabled();
-		$pids = array_map('optionizeElements', $pids);
-		exit(implode($pids, "\n"));
-	} else {
-		exit("<option value=''>(selected module not enabled on any projects)</option>");
-	}
-} elseif ($action == "export") {
-	$module = $_POST['module'];
-	$project = $_POST['project'];
 }
