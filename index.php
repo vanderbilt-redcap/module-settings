@@ -50,13 +50,13 @@
 		<div id="actions" class="row hidden">
 			<div id="export">
 				<h2>Export</h2>
-				<button type="button" onclick="exportCSV">Download .CSV</button>
+				<button type="button" onclick="exportCSV()">Download .CSV</button>
 			</div>
 			<div id="import">
 				<h2>Import</h2>
 				<p>Choose a settings file (.csv)</p>
 				<input type="file" name="settingsFile" id="settingsFile">
-				<button type="button" onclick="import">Import .CSV</button>
+				<button type="button" onclick="import()">Import .CSV</button>
 			</div>
 		</div>
 		<script

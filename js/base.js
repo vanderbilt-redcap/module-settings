@@ -17,6 +17,7 @@ function getProjectOptions(modulePrefix) {
 }
 
 function exportCSV() {
+	console.log("sending ajax...");
 	$.ajax({
 		url: "ajax.php",
 		data: {
@@ -29,9 +30,10 @@ function exportCSV() {
 		method: "POST",
 		success : function(data) {
 			console.log(data);
-			window.location.href = data;
+			// window.location.href = data;
 		},
 		fail : function(data) {
+			// console.log(data);
 			// $("#error").html("<pre>There was an error:\n" + data + "</pre>")
 		}
 	})

@@ -9,11 +9,28 @@ function optionizeElements($element) {
 	// unset($p);
 }
 
-function z($array, $path="") {
-	global $arrs;
+// value can be a string or array value
+// path is the
+function recurseSetting($arg, $path) {
+	global $fields;
+	global $paths;
+	global $column;
 	
-	foreach($array as $key => $val) {
-		$path = $key;
+	if (gettype($arg) == 'array') {
+		foreach($arg as $key => $val) {
+			$newpath = $path
+			$newpath[] = $key;
+			recurseSetting($val, $newpath);
+		}
+	} else {
+		$masterkey = implode($path, "_");
+		$row = array_search($masterkey, $paths, true);
+		if ($row === FALSE) {
+			$paths[] = $masterkey;
+			$fields[] = create_array(count($fields[0]) - 1);
+			$row = count(array_keys($paths));
+			$fields[$row][$column] = $arg;
+		}
 	}
 }
 
@@ -42,21 +59,47 @@ if ($action == "getProjects") {
 	$scope = $_POST['scope'];
 	$pid = $_POST['pid'];
 	
+	file_put_contents("log.txt", "prefix: $prefix\nscope: $scope\npid: $pid\n");
+	
 	$module = ExternalModules::getModuleInstance($prefix, $version);
 	$settings = $module->framework->getProjectSettings($pid);
-	$arrs = [];
-	$fields = array_keys($settings);
-	array_unshift($fields, "keys");
-	$arrs[] = $fields;
+	file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($settings, true), FILE_APPEND);
 	
-	z($settings);
+	$fields = [array_keys($settings)];	// $fields is the matrix starting at cell (1, 0) and goes to (n, n)
+	// file_put_contents("log.txt", "\nfields\n" . print_r($fields, true), FILE_APPEND);
 	
-	$filename = "testCSV.csv";
-	header("Content-Type:application/csv"); 
-	header("Content-Disposition:attachment;filename=$filename"); 
-	$output = fopen("php://output",'w');
-	foreach($arrs as $arr) {
-		fputcsv($output, $arr);
+	$paths = [""];	// will become the first column of the csv contains cells (0, 0) to (n, 0)
+	
+	foreach($fields as $column => $field) {
+		if ($scope != "project" and isset($field["system_value"])) {
+			recurseArray($field["system_value"], ["system_value"]);
+		}
 	}
-	fclose($output);
+	
+	/*
+	foreach($fields as $column => $field) {
+		if ($settings[$field]['system_value'] != null) {
+			if (!isset($arrs['system_value'])) $arrs['system_value']
+		}
+		if value is array then
+			$path = 'value'
+			recurse value array
+				for each $index, $item in array
+					$key = $path . "_$index"
+					if $arrs[$key] then add item to that array in correct column
+					else create $arrs[$key] and add item in correct column
+		else
+			write value
+		end
+	}
+	*/
+	
+	// $filename = "testCSV.csv";
+	// header("Content-Type:application/csv"); 
+	// header("Content-Disposition:attachment;filename=$filename"); 
+	// $output = fopen("php://output",'w');
+	// foreach($arrs as $arr) {
+		// fputcsv($output, $arr);
+	// }
+	// fclose($output);
 }
