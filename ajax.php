@@ -18,7 +18,7 @@ function recurseSetting($arg, $path) {
 	
 	if (gettype($arg) == 'array') {
 		foreach($arg as $key => $val) {
-			$newpath = $path
+			$newpath = $path;
 			$newpath[] = $key;
 			recurseSetting($val, $newpath);
 		}
@@ -74,6 +74,9 @@ if ($action == "getProjects") {
 		if ($scope != "project" and isset($field["system_value"])) {
 			recurseArray($field["system_value"], ["system_value"]);
 		}
+		if ($scope != "system" and isset($field["value"])) {
+			recurseArray($field["value"], ["value"]);
+		}
 	}
 	
 	/*
@@ -94,12 +97,17 @@ if ($action == "getProjects") {
 	}
 	*/
 	
-	// $filename = "testCSV.csv";
-	// header("Content-Type:application/csv"); 
-	// header("Content-Disposition:attachment;filename=$filename"); 
-	// $output = fopen("php://output",'w');
-	// foreach($arrs as $arr) {
-		// fputcsv($output, $arr);
-	// }
-	// fclose($output);
+	// combine paths column with the rest of the cells ($fields matrix)
+	foreach($fields as $i => $arr) {
+		array_unshift($arr, $paths[$i]);
+	}
+	
+	$filename = "testCSV.csv";
+	header("Content-Type:application/csv"); 
+	header("Content-Disposition:attachment;filename=$filename"); 
+	$output = fopen("php://output",'w');
+	foreach($fields as $arr) {
+		fputcsv($output, $arr);
+	}
+	fclose($output);
 }

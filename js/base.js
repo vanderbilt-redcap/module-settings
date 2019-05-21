@@ -17,26 +17,33 @@ function getProjectOptions(modulePrefix) {
 }
 
 function exportCSV() {
-	console.log("sending ajax...");
-	$.ajax({
-		url: "ajax.php",
-		data: {
-			action: "export",
-			prefix: $("#moduleSelect").children("option:selected").val(),
-			scope: $("#scopeSelect").children("option:selected").val(),
-			pid: $("#projectSelect").children("option:selected").val()
-		},
-		dataType: "text",
-		method: "POST",
-		success : function(data) {
-			console.log(data);
-			// window.location.href = data;
-		},
-		fail : function(data) {
+	let action = "export";
+	let prefix = $("#moduleSelect").children("option:selected").val();
+	let scope = $("#scopeSelect").children("option:selected").val();
+	let pid = $("#projectSelect").children("option:selected").val();
+	
+	window.location.href = "/redcap/plugins/module-settings/export.php?prefix=" + prefix + "&scope=" + scope + "&pid=" + pid;
+	
+	// console.log("sending ajax...");
+	// $.ajax({
+		// url: "ajax.php",
+		// data: {
+			// action: "export",
+			// prefix: $("#moduleSelect").children("option:selected").val(),
+			// scope: $("#scopeSelect").children("option:selected").val(),
+			// pid: $("#projectSelect").children("option:selected").val()
+		// },
+		// dataType: "text",
+		// method: "POST",
+		// success : function(data) {
 			// console.log(data);
-			// $("#error").html("<pre>There was an error:\n" + data + "</pre>")
-		}
-	})
+			// // window.location.href = data;
+		// },
+		// fail : function(data) {
+			// // console.log(data);
+			// // $("#error").html("<pre>There was an error:\n" + data + "</pre>")
+		// }
+	// })
 }
 
 $(function() {
