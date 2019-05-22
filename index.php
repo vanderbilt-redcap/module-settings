@@ -56,7 +56,7 @@
 				<h2>Import</h2>
 				<p>Choose a settings file (.csv)</p>
 				<input type="file" name="settingsFile" id="settingsFile">
-				<button type="button" onclick="import()">Import .CSV</button>
+				<button type="button" onclick="importSettings()">Import .CSV</button>
 			</div>
 		</div>
 		<script
