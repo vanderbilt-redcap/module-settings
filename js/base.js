@@ -16,6 +16,26 @@ function getProjectOptions(modulePrefix) {
 	})
 }
 
+// function import() {
+	// var myFormData = new FormData();
+	// myFormData.append('settingsFile', settingsFile.files[0]);
+
+	// $.ajax({
+		// url: 'import.php',
+		// type: 'POST',
+		// processData: false,
+		// contentType: false,
+		// dataType : 'json',
+		// data: myFormData,
+		// success : function(data) {
+			// console.log(data);
+		// },
+		// fail : function(data) {
+			// console.log(data);
+		// }
+	// });
+// }
+
 function exportCSV() {
 	let action = "export";
 	let prefix = $("#moduleSelect").children("option:selected").val();

@@ -1,6 +1,111 @@
 prefix: cat_mh
 scope: both
 pid: 25
-addressing field: enabled
-about to recurse system level values
-entered recurseSetting with path: system_value
+recursing enabled\_system_value -- writing value (type: boolean) to 1, 0 : 
+recursing enabled\_value -- writing value (type: boolean) to 2, 0 : 1
+recursing applicationid\_system_value -- writing value (type: string) to 1, 1 : VU_Portal
+recursing applicationid\_value -- writing value (type: string) to 2, 1 : abc
+recursing organizationid\_system_value -- writing value (type: string) to 1, 2 : 114
+recursing organizationid\_value -- writing value (type: string) to 2, 2 : 123
+recursing catmh_options\_value_0 -- writing value (type: string) to 3, 3 : true
+recursing catmh_options\_value_1 -- writing value (type: string) to 4, 3 : true
+recursing survey_instrument\_value_0 -- writing value (type: string) to 3, 4 : My First Instrument
+recursing survey_instrument\_value_1 -- writing value (type: string) to 4, 4 : Second Instrument
+recursing language\_value_0 -- writing value (type: string) to 3, 5 : 1
+recursing language\_value_1 -- writing value (type: string) to 4, 5 : 1
+recursing dep\_value_0 -- writing value (type: boolean) to 3, 6 : 1
+recursing dep\_value_1 -- writing value (type: boolean) to 4, 6 : 
+recursing mdd\_value_0 -- writing value (type: boolean) to 3, 7 : 1
+recursing mdd\_value_1 -- writing value (type: boolean) to 4, 7 : 
+recursing anx\_value_0 -- writing value (type: boolean) to 3, 8 : 
+recursing anx\_value_1 -- writing value (type: boolean) to 4, 8 : 1
+recursing mhm\_value_0 -- writing value (type: boolean) to 3, 9 : 
+recursing mhm\_value_1 -- writing value (type: boolean) to 4, 9 : 1
+recursing pdep\_value_0 -- writing value (type: boolean) to 3, 10 : 
+recursing pdep\_value_1 -- writing value (type: boolean) to 4, 10 : 
+recursing panx\_value_0 -- writing value (type: boolean) to 3, 11 : 
+recursing panx\_value_1 -- writing value (type: boolean) to 4, 11 : 
+recursing pmhm\_value_0 -- writing value (type: boolean) to 3, 12 : 
+recursing pmhm\_value_1 -- writing value (type: boolean) to 4, 12 : 
+recursing sa\_value_0 -- writing value (type: boolean) to 3, 13 : 
+recursing sa\_value_1 -- writing value (type: boolean) to 4, 13 : 
+recursing ptsd\_value_0 -- writing value (type: boolean) to 3, 14 : 
+recursing ptsd\_value_1 -- writing value (type: boolean) to 4, 14 : 
+recursing cssrs\_value_0 -- writing value (type: boolean) to 3, 15 : 
+recursing cssrs\_value_1 -- writing value (type: boolean) to 4, 15 : 
+recursing ss\_value_0 -- writing value (type: boolean) to 3, 16 : 
+recursing ss\_value_1 -- writing value (type: boolean) to 4, 16 : 
+recursing discoverable-in-project\_system_value -- writing value (type: boolean) to 1, 17 : 
+recursing discoverable-in-project\_value -- writing value (type: boolean) to 2, 17 : 
+recursing dep_show_results\_value_0 -- writing value (type: boolean) to 3, 18 : 1
+recursing dep_show_results\_value_1 -- writing value (type: boolean) to 4, 18 : 
+recursing mdd_show_results\_value_0 -- writing value (type: boolean) to 3, 19 : 
+recursing mdd_show_results\_value_1 -- writing value (type: boolean) to 4, 19 : 
+recursing anx_show_results\_value_0 -- writing value (type: boolean) to 3, 20 : 
+recursing anx_show_results\_value_1 -- writing value (type: boolean) to 4, 20 : 1
+recursing mhm_show_results\_value_0 -- writing value (type: boolean) to 3, 21 : 
+recursing mhm_show_results\_value_1 -- writing value (type: boolean) to 4, 21 : 
+recursing pdep_show_results\_value_0 -- writing value (type: boolean) to 3, 22 : 
+recursing pdep_show_results\_value_1 -- writing value (type: boolean) to 4, 22 : 
+recursing panx_show_results\_value_0 -- writing value (type: boolean) to 3, 23 : 
+recursing panx_show_results\_value_1 -- writing value (type: boolean) to 4, 23 : 
+recursing pmhm_show_results\_value_0 -- writing value (type: boolean) to 3, 24 : 
+recursing pmhm_show_results\_value_1 -- writing value (type: boolean) to 4, 24 : 
+recursing sa_show_results\_value_0 -- writing value (type: boolean) to 3, 25 : 
+recursing sa_show_results\_value_1 -- writing value (type: boolean) to 4, 25 : 
+recursing ptsd_show_results\_value_0 -- writing value (type: boolean) to 3, 26 : 
+recursing ptsd_show_results\_value_1 -- writing value (type: boolean) to 4, 26 : 
+recursing cssrs_show_results\_value_0 -- writing value (type: boolean) to 3, 27 : 
+recursing cssrs_show_results\_value_1 -- writing value (type: boolean) to 4, 27 : 
+recursing ss_show_results\_value_0 -- writing value (type: boolean) to 3, 28 : 
+recursing ss_show_results\_value_1 -- writing value (type: boolean) to 4, 28 : 
+recursing sequence\_value_0 -- writing value (type: string) to 3, 29 : seq1
+recursing sequence\_value_1 -- writing value (type: string) to 4, 29 : seq2
+recursing periodicity-every\_value_0 -- writing value (type: string) to 3, 30 : 3
+recursing periodicity-every\_value_1 -- writing value (type: string) to 4, 30 : 7
+recursing periodicity-end\_value_0 -- writing value (type: string) to 3, 31 : 150
+recursing periodicity-end\_value_1 -- writing value (type: string) to 4, 31 : 280
+recursing daysElapsed\_value -- writing value (type: integer) to 2, 32 : 31
+recursing email-body\_value -- writing value (type: string) to 2, 33 : <p>Hello participant,</p>
+<p>Please take another CAT-MH interview:</p>
+<p>[interview-links]</p>
+<p>&nbsp;</p>
+<p>If the above link is not working, please paste the following into your browser and navigate to this page manually:</p>
+<p>[interview-urls]</p>
+<p>&nbsp;</p>
+<p>Thank you!</p>
+recursing email-sender\_value -- writing value (type: string) to 2, 34 : carl.w.reed@vumc.org
+recursing email-subject\_value -- writing value (type: string) to 2, 35 : New CAT-MH Interview Invite
+recursing version\_system_value -- writing value (type: string) to 1, 36 : v0.1
+recursing version\_value -- writing value (type: string) to 2, 36 : v0.1
+recursing subtest\_value_0_0 -- writing value (type: string) to 5, 37 : true
+recursing subtest\_value_1_0 -- writing value (type: string) to 6, 37 : true
+recursing we_must\_value_0_0_0 -- writing value (type: string) to 7, 38 : true
+recursing we_must\_value_1_0_0 -- writing value (type: string) to 8, 38 : true
+recursing go_deep\_value_0_0_0 -- writing value (type: string) to 7, 39 : ab
+recursing go_deep\_value_1_0_0 -- writing value (type: string) to 8, 39 : af
+recursing go_deep2\_value_0_0_0 -- writing value (type: string) to 7, 40 : cdd
+recursing go_deep2\_value_1_0_0 -- writing value (type: NULL) to 8, 40 : 
+recursing stay_here\_value_0_0 -- writing value (type: string) to 5, 41 : eeffff
+recursing stay_here\_value_1_0 -- writing value (type: string) to 6, 41 : xxxxxxxxxz
+recursing days-elapsed\_value -- writing value (type: integer) to 2, 42 : 19
+recursing subtest_system\_system_value_0 -- writing value (type: string) to 9, 43 : true
+recursing subtest_system\_system_value_1 -- writing value (type: string) to 10, 43 : true
+recursing subtest_system\_value_0 -- writing value (type: string) to 3, 43 : true
+recursing subtest_system\_value_1 -- writing value (type: string) to 4, 43 : true
+recursing level1\_system_value_0_0 -- writing value (type: string) to 11, 44 : true
+recursing level1\_system_value_1_0 -- writing value (type: string) to 12, 44 : true
+recursing level1\_value_0_0 -- writing value (type: string) to 5, 44 : true
+recursing level1\_value_1_0 -- writing value (type: string) to 6, 44 : true
+recursing level2a\_system_value_0_0 -- writing value (type: string) to 11, 45 : abc
+recursing level2a\_system_value_1_0 -- writing value (type: NULL) to 12, 45 : 
+recursing level2a\_value_0_0 -- writing value (type: string) to 5, 45 : abc
+recursing level2a\_value_1_0 -- writing value (type: NULL) to 6, 45 : 
+recursing level2b\_system_value_0_0 -- writing value (type: NULL) to 11, 46 : 
+recursing level2b\_system_value_1_0 -- writing value (type: string) to 12, 46 : xyz
+recursing level2b\_value_0_0 -- writing value (type: NULL) to 5, 46 : 
+recursing level2b\_value_1_0 -- writing value (type: string) to 6, 46 : xyz
+recursing level1b\_system_value_0 -- writing value (type: string) to 9, 47 : def
+recursing level1b\_system_value_1 -- writing value (type: string) to 10, 47 : asdfasdf
+recursing level1b\_value_0 -- writing value (type: string) to 3, 47 : def
+recursing level1b\_value_1 -- writing value (type: string) to 4, 47 : asdfasdf

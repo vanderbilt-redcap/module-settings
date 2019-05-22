@@ -1,0 +1,588 @@
+getProjectSettings
+Array
+(
+    [enabled] => Array
+        (
+            [value] => 1
+            [system_value] => 
+        )
+
+    [applicationid] => Array
+        (
+            [value] => abc
+            [system_value] => VU_Portal
+        )
+
+    [organizationid] => Array
+        (
+            [value] => 123
+            [system_value] => 114
+        )
+
+    [catmh_options] => Array
+        (
+            [value] => Array
+                (
+                    [0] => true
+                    [1] => true
+                )
+
+        )
+
+    [survey_instrument] => Array
+        (
+            [value] => Array
+                (
+                    [0] => My First Instrument
+                    [1] => Second Instrument
+                )
+
+        )
+
+    [language] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 1
+                    [1] => 1
+                )
+
+        )
+
+    [dep] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 1
+                    [1] => 
+                )
+
+        )
+
+    [mdd] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 1
+                    [1] => 
+                )
+
+        )
+
+    [anx] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 1
+                )
+
+        )
+
+    [mhm] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 1
+                )
+
+        )
+
+    [pdep] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [panx] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [pmhm] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [sa] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [ptsd] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [cssrs] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [ss] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [discoverable-in-project] => Array
+        (
+            [system_value] => 
+            [value] => 
+        )
+
+    [dep_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 1
+                    [1] => 
+                )
+
+        )
+
+    [mdd_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [anx_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 1
+                )
+
+        )
+
+    [mhm_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [pdep_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [panx_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [pmhm_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [sa_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [ptsd_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [cssrs_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [ss_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [sequence] => Array
+        (
+            [value] => Array
+                (
+                    [0] => seq1
+                    [1] => seq2
+                )
+
+        )
+
+    [periodicity-every] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 3
+                    [1] => 7
+                )
+
+        )
+
+    [periodicity-end] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 150
+                    [1] => 280
+                )
+
+        )
+
+    [daysElapsed] => Array
+        (
+            [value] => 31
+        )
+
+    [email-body] => Array
+        (
+            [value] => <p>Hello participant,</p>
+<p>Please take another CAT-MH interview:</p>
+<p>[interview-links]</p>
+<p>&nbsp;</p>
+<p>If the above link is not working, please paste the following into your browser and navigate to this page manually:</p>
+<p>[interview-urls]</p>
+<p>&nbsp;</p>
+<p>Thank you!</p>
+        )
+
+    [email-sender] => Array
+        (
+            [value] => carl.w.reed@vumc.org
+        )
+
+    [email-subject] => Array
+        (
+            [value] => New CAT-MH Interview Invite
+        )
+
+    [version] => Array
+        (
+            [system_value] => v0.1
+            [value] => v0.1
+        )
+
+    [subtest] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => true
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => true
+                        )
+
+                )
+
+        )
+
+    [we_must] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => true
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => true
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [go_deep] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => ab
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => af
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [go_deep2] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => cdd
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [stay_here] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => eeffff
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => xxxxxxxxxz
+                        )
+
+                )
+
+        )
+
+    [days-elapsed] => Array
+        (
+            [value] => 18
+        )
+
+    [subtest_system] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => true
+                    [1] => true
+                )
+
+            [value] => Array
+                (
+                    [0] => true
+                    [1] => true
+                )
+
+        )
+
+    [level1] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => true
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => true
+                        )
+
+                )
+
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => true
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => true
+                        )
+
+                )
+
+        )
+
+    [level2a] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => abc
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 
+                        )
+
+                )
+
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => abc
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 
+                        )
+
+                )
+
+        )
+
+    [level2b] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => xyz
+                        )
+
+                )
+
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => xyz
+                        )
+
+                )
+
+        )
+
+    [level1b] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => def
+                    [1] => asdfasdf
+                )
+
+            [value] => Array
+                (
+                    [0] => def
+                    [1] => asdfasdf
+                )
+
+        )
+
+)
