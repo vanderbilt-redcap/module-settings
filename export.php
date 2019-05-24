@@ -36,11 +36,11 @@ $prefix = $_GET['prefix'];
 $scope = $_GET['scope'];
 $pid = $_GET['pid'];
 
-// file_put_contents("log.txt", "prefix: $prefix\nscope: $scope\npid: $pid\n");
+file_put_contents("log.txt", "prefix: $prefix\nscope: $scope\npid: $pid\n");
 
 $module = ExternalModules::getModuleInstance($prefix, $version);
 $settings = $module->framework->getProjectSettings($pid);
-// file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($settings, true), FILE_APPEND);
+file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($settings, true), FILE_APPEND);
 
 $fields = [array_keys($settings)];	// $fields is the matrix starting at cell (1, 0) and goes to (n, n)
 
@@ -60,11 +60,11 @@ foreach($fields as $i => &$arr) {
 	array_unshift($arr, $paths[$i]);
 }
 
-$filename = "testCSV.csv";
+$filename = implode([$prefix, $scope, $pid, 'settings', 'export'], "_") . ".csv";
 header("Content-Type: application/csv"); 
 header("Content-Disposition: attachment; filename=$filename"); 
 $output = fopen("php://output",'w');
-foreach($fields as $arr) {
-	fputcsv($output, $arr);
+foreach($fields as $row) {
+	fputcsv($output, $row);
 }
 fclose($output);

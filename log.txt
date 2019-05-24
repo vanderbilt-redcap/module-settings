@@ -1,717 +1,592 @@
-log start --
-$_POST:
+prefix: cat_mh
+scope: both
+pid: 25
+
+getProjectSettings
 Array
 (
-    [prefix] => cat_mh
-    [scope] => both
-    [pid] => 25
-)
-
-$_FILES:
-Array
-(
-    [settingsFile] => Array
+    [enabled] => Array
         (
-            [name] => 25-json.csv
-            [type] => application/vnd.ms-excel
-            [tmp_name] => C:\xampp\tmp\php9736.tmp
-            [error] => 0
-            [size] => 2339
+            [value] => 1
+            [system_value] => 
         )
 
-)
-
-settings array:
-Array
-(
-    [0] => Array
+    [applicationid] => Array
         (
-            [0] => 
-            [1] => enabled
-            [2] => applicationid
-            [3] => organizationid
-            [4] => catmh_options
-            [5] => survey_instrument
-            [6] => language
-            [7] => dep
-            [8] => mdd
-            [9] => anx
-            [10] => mhm
-            [11] => pdep
-            [12] => panx
-            [13] => pmhm
-            [14] => sa
-            [15] => ptsd
-            [16] => cssrs
-            [17] => ss
-            [18] => discoverable-in-project
-            [19] => dep_show_results
-            [20] => mdd_show_results
-            [21] => anx_show_results
-            [22] => mhm_show_results
-            [23] => pdep_show_results
-            [24] => panx_show_results
-            [25] => pmhm_show_results
-            [26] => sa_show_results
-            [27] => ptsd_show_results
-            [28] => cssrs_show_results
-            [29] => ss_show_results
-            [30] => sequence
-            [31] => periodicity-every
-            [32] => periodicity-end
-            [33] => daysElapsed
-            [34] => email-body
-            [35] => email-sender
-            [36] => email-subject
-            [37] => version
-            [38] => subtest
-            [39] => we_must
-            [40] => go_deep
-            [41] => go_deep2
-            [42] => stay_here
-            [43] => days-elapsed
-            [44] => subtest_system
-            [45] => level1
-            [46] => level2a
-            [47] => level2b
-            [48] => level1b
+            [value] => abc
+            [system_value] => VU_Portal
         )
 
-    [1] => Array
+    [organizationid] => Array
         (
-            [0] => system_value
-            [1] => false
-            [2] => "VU_Portal"
-            [3] => "114"
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => false
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => "v0.1"
-            [38] => 
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => 
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => 
+            [value] => 123
+            [system_value] => 114
         )
 
-    [2] => Array
+    [catmh_options] => Array
         (
-            [0] => value
-            [1] => true
-            [2] => "abc"
-            [3] => "123"
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => false
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 31
-            [34] => "<p>Hello participant,<\/p>\n<p>Please take another CAT-MH interview:<\/p>\n<p>[interview-links]<\/p>\n<p>&nbsp;<\/p>\n<p>If the above link is not working, please paste the following into your browser and navigate to this page manually:<\/p>\n<p>[interview-urls]<\/p>\n<p>&nbsp;<\/p>\n<p>Thank you!<\/p>"
-            [35] => "carl.w.reed@vumc.org"
-            [36] => "New CAT-MH Interview Invite"
-            [37] => "v0.1"
-            [38] => 
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 19
-            [44] => 
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => 
+            [value] => Array
+                (
+                    [0] => true
+                    [1] => true
+                )
+
         )
 
-    [3] => Array
+    [survey_instrument] => Array
         (
-            [0] => value_0
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => "true"
-            [5] => "My First Instrument"
-            [6] => "1"
-            [7] => true
-            [8] => true
-            [9] => false
-            [10] => false
-            [11] => false
-            [12] => false
-            [13] => false
-            [14] => false
-            [15] => false
-            [16] => false
-            [17] => false
-            [18] => 
-            [19] => true
-            [20] => false
-            [21] => false
-            [22] => false
-            [23] => false
-            [24] => false
-            [25] => false
-            [26] => false
-            [27] => false
-            [28] => false
-            [29] => false
-            [30] => "seq1"
-            [31] => "3"
-            [32] => "150"
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => 
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => "true"
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => "def"
+            [value] => Array
+                (
+                    [0] => My First Instrument
+                    [1] => Second Instrument
+                )
+
         )
 
-    [4] => Array
+    [language] => Array
         (
-            [0] => value_1
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => "true"
-            [5] => "Second Instrument"
-            [6] => "1"
-            [7] => false
-            [8] => false
-            [9] => true
-            [10] => true
-            [11] => false
-            [12] => false
-            [13] => false
-            [14] => false
-            [15] => false
-            [16] => false
-            [17] => false
-            [18] => 
-            [19] => false
-            [20] => false
-            [21] => true
-            [22] => false
-            [23] => false
-            [24] => false
-            [25] => false
-            [26] => false
-            [27] => false
-            [28] => false
-            [29] => false
-            [30] => "seq2"
-            [31] => "7"
-            [32] => "280"
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => 
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => "true"
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => "asdfasdf"
+            [value] => Array
+                (
+                    [0] => 1
+                    [1] => 1
+                )
+
         )
 
-    [5] => Array
+    [dep] => Array
         (
-            [0] => value_0_0
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => 
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => "true"
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => "eeffff"
-            [43] => 
-            [44] => 
-            [45] => "true"
-            [46] => "abc"
-            [47] => null
-            [48] => 
+            [value] => Array
+                (
+                    [0] => 1
+                    [1] => 
+                )
+
         )
 
-    [6] => Array
+    [mdd] => Array
         (
-            [0] => value_1_0
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => 
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => "true"
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => "xxxxxxxxxz"
-            [43] => 
-            [44] => 
-            [45] => "true"
-            [46] => null
-            [47] => "xyz"
-            [48] => 
+            [value] => Array
+                (
+                    [0] => 1
+                    [1] => 
+                )
+
         )
 
-    [7] => Array
+    [anx] => Array
         (
-            [0] => value_0_0_0
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => 
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => 
-            [39] => "true"
-            [40] => "ab"
-            [41] => "cdd"
-            [42] => 
-            [43] => 
-            [44] => 
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => 
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 1
+                )
+
         )
 
-    [8] => Array
+    [mhm] => Array
         (
-            [0] => value_1_0_0
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => 
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => 
-            [39] => "true"
-            [40] => "af"
-            [41] => null
-            [42] => 
-            [43] => 
-            [44] => 
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => 
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 1
+                )
+
         )
 
-    [9] => Array
+    [pdep] => Array
         (
-            [0] => system_value_0
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => 
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => 
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => "true"
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => "def"
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
         )
 
-    [10] => Array
+    [panx] => Array
         (
-            [0] => system_value_1
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => 
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => 
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => "true"
-            [45] => 
-            [46] => 
-            [47] => 
-            [48] => "asdfasdf"
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
         )
 
-    [11] => Array
+    [pmhm] => Array
         (
-            [0] => system_value_0_0
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => 
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => 
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => 
-            [45] => "true"
-            [46] => "abc"
-            [47] => null
-            [48] => 
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
         )
 
-    [12] => Array
+    [sa] => Array
         (
-            [0] => system_value_0_0
-            [1] => 
-            [2] => 
-            [3] => 
-            [4] => 
-            [5] => 
-            [6] => 
-            [7] => 
-            [8] => 
-            [9] => 
-            [10] => 
-            [11] => 
-            [12] => 
-            [13] => 
-            [14] => 
-            [15] => 
-            [16] => 
-            [17] => 
-            [18] => 
-            [19] => 
-            [20] => 
-            [21] => 
-            [22] => 
-            [23] => 
-            [24] => 
-            [25] => 
-            [26] => 
-            [27] => 
-            [28] => 
-            [29] => 
-            [30] => 
-            [31] => 
-            [32] => 
-            [33] => 
-            [34] => 
-            [35] => 
-            [36] => 
-            [37] => 
-            [38] => 
-            [39] => 
-            [40] => 
-            [41] => 
-            [42] => 
-            [43] => 
-            [44] => 
-            [45] => "true"
-            [46] => "abc"
-            [47] => null
-            [48] => 
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [ptsd] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [cssrs] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [ss] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [discoverable-in-project] => Array
+        (
+            [system_value] => 
+            [value] => 
+        )
+
+    [dep_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 1
+                    [1] => 
+                )
+
+        )
+
+    [mdd_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [anx_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 1
+                )
+
+        )
+
+    [mhm_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [pdep_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [panx_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [pmhm_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [sa_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [ptsd_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [cssrs_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [ss_show_results] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 
+                    [1] => 
+                )
+
+        )
+
+    [sequence] => Array
+        (
+            [value] => Array
+                (
+                    [0] => seq1
+                    [1] => seq2
+                )
+
+        )
+
+    [periodicity-every] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 3
+                    [1] => 7
+                )
+
+        )
+
+    [periodicity-end] => Array
+        (
+            [value] => Array
+                (
+                    [0] => 150
+                    [1] => 280
+                )
+
+        )
+
+    [daysElapsed] => Array
+        (
+            [value] => 31
+        )
+
+    [email-body] => Array
+        (
+            [value] => <p>Hello participant,</p>
+<p>Please take another CAT-MH interview:</p>
+<p>[interview-links]</p>
+<p>&nbsp;</p>
+<p>If the above link is not working, please paste the following into your browser and navigate to this page manually:</p>
+<p>[interview-urls]</p>
+<p>&nbsp;</p>
+<p>Thank you!</p>
+        )
+
+    [email-sender] => Array
+        (
+            [value] => carl.w.reed@vumc.org
+        )
+
+    [email-subject] => Array
+        (
+            [value] => New CAT-MH Interview Invite
+        )
+
+    [version] => Array
+        (
+            [system_value] => v0.1
+            [value] => v0.1
+        )
+
+    [subtest] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => true
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => true
+                        )
+
+                )
+
+        )
+
+    [we_must] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => true
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => true
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [go_deep] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => ab
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => af
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [go_deep2] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => cdd
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => 
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [stay_here] => Array
+        (
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => eeffff
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => xxxxxxxxxz
+                        )
+
+                )
+
+        )
+
+    [days-elapsed] => Array
+        (
+            [value] => 21
+        )
+
+    [subtest_system] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => true
+                    [1] => true
+                )
+
+            [value] => Array
+                (
+                    [0] => true
+                    [1] => true
+                )
+
+        )
+
+    [level1] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => true
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => true
+                        )
+
+                )
+
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => true
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => true
+                        )
+
+                )
+
+        )
+
+    [level2a] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => abc
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 
+                        )
+
+                )
+
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => abc
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => 
+                        )
+
+                )
+
+        )
+
+    [level2b] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => xyz
+                        )
+
+                )
+
+            [value] => Array
+                (
+                    [0] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [0] => xyz
+                        )
+
+                )
+
+        )
+
+    [level1b] => Array
+        (
+            [system_value] => Array
+                (
+                    [0] => def
+                    [1] => asdfasdf
+                )
+
+            [value] => Array
+                (
+                    [0] => def
+                    [1] => asdfasdf
+                )
+
         )
 
 )
-

@@ -25,7 +25,9 @@ function importSettings() {
 	myFormData.append("prefix", prefix);
 	myFormData.append("scope", scope);
 	myFormData.append("pid", pid);
-
+	
+	console.log('firing import ajax...');
+	
 	$.ajax({
 		url: 'import.php',
 		type: 'POST',
@@ -33,13 +35,21 @@ function importSettings() {
 		contentType: false,
 		dataType : 'json',
 		data: myFormData,
+		error: function(req, status, err) {
+			console.log('ajax error');
+			console.log(req);
+			console.log(status);
+			console.log(err);
+		},
 		success : function(data) {
+			console.log('ajax successful');
 			console.log(data);
 		},
 		fail : function(data) {
+			console.log('ajax failed');
 			console.log(data);
 		}
-	});
+	})
 }
 
 function exportCSV() {
@@ -48,27 +58,6 @@ function exportCSV() {
 	let pid = $("#projectSelect").children("option:selected").val();
 	
 	window.location.href = "/redcap/plugins/module-settings/export.php?prefix=" + prefix + "&scope=" + scope + "&pid=" + pid;
-	
-	// console.log("sending ajax...");
-	// $.ajax({
-		// url: "ajax.php",
-		// data: {
-			// action: "export",
-			// prefix: $("#moduleSelect").children("option:selected").val(),
-			// scope: $("#scopeSelect").children("option:selected").val(),
-			// pid: $("#projectSelect").children("option:selected").val()
-		// },
-		// dataType: "text",
-		// method: "POST",
-		// success : function(data) {
-			// console.log(data);
-			// // window.location.href = data;
-		// },
-		// fail : function(data) {
-			// // console.log(data);
-			// // $("#error").html("<pre>There was an error:\n" + data + "</pre>")
-		// }
-	// })
 }
 
 $(function() {
