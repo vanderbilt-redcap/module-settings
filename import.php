@@ -77,11 +77,19 @@ foreach ($csv[0] as $col => $fieldname) {
 	}
 }
 
-$module->framework->setProjectSettings($settings, $pid);
+// file_put_contents("log.txt", "\nget class methods\n" . print_r(get_class_methods($module), true), FILE_APPEND);
 
-file_put_contents("log.txt", "\$settings level2b 1 0 value: {$settings['level2b']['system_value'][1][0]}\n", FILE_APPEND);
-$module->framework->getProjectSettings($pid);
-file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($settings, true), FILE_APPEND);
+// $module->framework->setProjectSettings($settings, $pid);
+$newSettings = $module->framework->getProjectSettings($pid);
+
+file_put_contents("log.txt", "\$settings level2b system_value 1 0: {$newSettings['level2b']['system_value'][1][0]}\n", FILE_APPEND);
+file_put_contents("log.txt", "\$settings subtest value 1 0: {$newSettings['subtest']['value'][1][0]}\n", FILE_APPEND);
+file_put_contents("log.txt", "\$settings organizationid value: {$newSettings['organizationid']['value']}\n", FILE_APPEND);
+
+// $module = ExternalModules::getModuleInstance($prefix);
+// $module->framework->getProjectSettings($pid);
+file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($newSettings, true), FILE_APPEND);
+file_put_contents("log.txt", "\n\nimport finished", FILE_APPEND);
 
 exit(json_encode([
 	"message" => "Success! Settings imported to $prefix."

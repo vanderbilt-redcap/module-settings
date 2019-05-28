@@ -1,6 +1,7 @@
-prefix: cat_mh
-scope: both
-pid: 25
+log start --
+$settings level2b system_value 1 0: xyz
+$settings subtest value 1 0: true
+$settings organizationid value: 123
 
 getProjectSettings
 Array
@@ -458,7 +459,7 @@ Array
 
     [days-elapsed] => Array
         (
-            [value] => 21
+            [value] => 25
         )
 
     [subtest_system] => Array
@@ -590,3 +591,6 @@ Array
         )
 
 )
+
+
+import finished
