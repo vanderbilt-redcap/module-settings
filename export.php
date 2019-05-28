@@ -25,7 +25,8 @@ function recurseSetting($arg, $path) {
 			$fields[] = array_fill(0, count($fields[0]), null);
 			$row = count(array_keys($paths)) - 1;
 		}
-		$fields[$row][$column] = json_encode($arg);
+		// $fields[$row][$column] = json_encode($arg);
+		$fields[$row][$column] = json_encode($arg, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 		// file_put_contents("log.txt", "recursing $field\_" . implode($path, "_") . " -- writing value (type: " . gettype($arg) . ") to $row, $column : $arg\n", FILE_APPEND);
 	}
 }

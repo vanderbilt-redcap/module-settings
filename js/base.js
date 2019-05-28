@@ -42,8 +42,23 @@ function importSettings() {
 			console.log(err);
 		},
 		success : function(data) {
-			console.log('ajax successful');
+			// console.log('ajax successful');
 			console.log(data);
+			$("#results").html("<h2>Results</h2>");
+			if (typeof(data.results) !== 'undefined') {
+				let results = JSON.parse(data.results);
+				let html = "<h2>Results</h2>";
+				html += "<pre>";
+				results.forEach(element => {
+					html += element + "\n";
+				});
+				html += "</pre>";
+				// $("#results").html("<h2>Results</h2>\n" + "<pre>" + results + "</pre>");
+				$("#results").html(html);
+				$("#results").show();
+			} else {
+				$("#results").hide();
+			}
 		},
 		fail : function(data) {
 			console.log('ajax failed');
@@ -53,6 +68,7 @@ function importSettings() {
 }
 
 function exportCSV() {
+	$("#results").hide();
 	let prefix = $("#moduleSelect").children("option:selected").val();
 	let scope = $("#scopeSelect").children("option:selected").val();
 	let pid = $("#projectSelect").children("option:selected").val();
@@ -71,6 +87,7 @@ $(function() {
 			getProjectOptions(prefix);
 			$("#projects").show();
 		}
+		$("#results").hide();
 	});
 	$("#scopeSelect").change(function() {
 		let scope = $(this).children("option:selected").val();
@@ -86,6 +103,7 @@ $(function() {
 				$("#actions").show();
 			}
 		}
+		$("#results").hide();
 	});
 	$("#projectSelect").change(function() {
 		let pid = $(this).children("option:selected").val();
@@ -94,5 +112,6 @@ $(function() {
 		} else {
 			$("#actions").show();
 		}
+		$("#results").hide();
 	});
 })

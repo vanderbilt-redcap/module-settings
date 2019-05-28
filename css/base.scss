@@ -20,8 +20,8 @@ div.row {
 }
 
 #select {
-	padding-top: 5%;
-	padding-bottom: 3%;
+	padding-top: 3%;
+	padding-bottom: 5%;
 	div {
 		padding-bottom: 20px;
 	}
@@ -29,6 +29,12 @@ div.row {
 
 #import {
 	border-left: 1px solid black;
+}
+
+#results {
+	padding-top: 5%;
+	padding-bottom: 3%;
+	width: 70%;
 }
 
 select {

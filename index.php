@@ -59,6 +59,9 @@
 				<button type="button" onclick="importSettings()">Import .CSV</button>
 			</div>
 		</div>
+		<div id="results" class="hidden">
+			<h2>Results</h2>
+		</div>
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.min.js"
 			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

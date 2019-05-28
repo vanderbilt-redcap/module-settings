@@ -67,7 +67,7 @@ foreach ($csv[0] as $col => $fieldname) {
 			$settingsChain = &$settings[$fieldname];
 			foreach ($keylist as $i => $key) {
 				if ($i == count($keylist) - 1) {
-					$settingsChain[$key] = json_decode($array[$col]);	// last key holds not an array but a value
+					$settingsChain[$key] = json_decode($array[$col], true);	// last key holds not an array but a value
 				} else {
 					if (!isset($settingsChain[$key])) $settingsChain[$key] = [];
 				}
@@ -77,20 +77,36 @@ foreach ($csv[0] as $col => $fieldname) {
 	}
 }
 
-// file_put_contents("log.txt", "\nget class methods\n" . print_r(get_class_methods($module), true), FILE_APPEND);
+file_put_contents("log.txt", "\nsettings determined via imported file:\n" . print_r($settings, true), FILE_APPEND);
 
-// $module->framework->setProjectSettings($settings, $pid);
+// $module->framework->setProjectSettings($settings, $pid); // don't use this
+
+$results = [];
+foreach($settings as $fieldname => $setting) {
+	if (!empty($setting['system_value'])) {
+		if (ExternalModules::hasSystemSettingsSavePermission($prefix)) {
+			$module->framework->setSystemSetting($fieldname, $setting['system_value']);
+			$results[] = "System setting '$fieldname' set.";
+		} else {
+			$results[] = "System setting '$fieldname' not set because you do not have system save permissions.";
+		}
+	}
+	if (!empty($setting['value'])) {
+		if (ExternalModules::hasProjectSettingSavePermission($prefix, $fieldname)) {
+			$module->framework->setProjectSetting($fieldname, $setting['value'], $pid);
+			$results[] = "Project setting '$fieldname' set.";
+		} else {
+			$results[] = "Project setting '$fieldname' not set because you do not have project save permissions for this field.";
+		}
+	}
+}
+
 $newSettings = $module->framework->getProjectSettings($pid);
 
-file_put_contents("log.txt", "\$settings level2b system_value 1 0: {$newSettings['level2b']['system_value'][1][0]}\n", FILE_APPEND);
-file_put_contents("log.txt", "\$settings subtest value 1 0: {$newSettings['subtest']['value'][1][0]}\n", FILE_APPEND);
-file_put_contents("log.txt", "\$settings organizationid value: {$newSettings['organizationid']['value']}\n", FILE_APPEND);
-
-// $module = ExternalModules::getModuleInstance($prefix);
-// $module->framework->getProjectSettings($pid);
 file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($newSettings, true), FILE_APPEND);
 file_put_contents("log.txt", "\n\nimport finished", FILE_APPEND);
 
 exit(json_encode([
-	"message" => "Success! Settings imported to $prefix."
+	"message" => "Success! Settings imported to $prefix.",
+	"results" => json_encode($results, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK)
 ]));
