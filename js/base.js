@@ -79,6 +79,7 @@ function exportCSV() {
 $(function() {
 	$("#moduleSelect").change(function() {
 		let prefix = $(this).children("option:selected").val();
+		let scope = $("#scopeSelect").children("option:selected").val();
 		if (prefix == "") {
 			$("#actions").hide();
 			$("#projects").hide();

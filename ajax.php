@@ -46,8 +46,24 @@ if ($action == "getProjects") {
 		exit("<option value=''>(selected module disabled on this system)</option>");
 	}
 	$module = ExternalModules::getModuleInstance($prefix, $version);
-	if (isset($module->framework)) {
-		$pids = $module->framework->getProjectsWithModuleEnabled();
+	// copypasta from framework->getProjectsWithModuleEnabled so even non-frameworked external modules can get import/export support
+	$results = $module->query("
+		select project_id
+		from redcap_external_modules m
+		join redcap_external_module_settings s
+			on m.external_module_id = s.external_module_id
+		where
+			m.directory_prefix = '$prefix'
+			and s.value = 'true'
+			and s.`key` = 'enabled'
+	");
+
+	$pids = [];
+	while($row = $results->fetch_assoc()) {
+		$pids[] = $row['project_id'];
+	}
+	
+	if (!empty($pids)) {
 		$pids = array_map('optionizeElements', $pids);
 		array_unshift($pids, "<option value=''></option>");
 		exit(implode($pids, "\n"));
