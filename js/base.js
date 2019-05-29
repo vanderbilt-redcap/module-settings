@@ -26,7 +26,7 @@ function importSettings() {
 	myFormData.append("scope", scope);
 	myFormData.append("pid", pid);
 	
-	console.log('firing import ajax...');
+	// console.log('firing import ajax...');
 	
 	$.ajax({
 		url: 'import.php',
@@ -43,7 +43,7 @@ function importSettings() {
 		},
 		success : function(data) {
 			// console.log('ajax successful');
-			console.log(data);
+			// console.log(data);
 			$("#results").html("<h2>Results</h2>");
 			if (typeof(data.results) !== 'undefined') {
 				let results = JSON.parse(data.results);
