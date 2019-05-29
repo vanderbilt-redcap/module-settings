@@ -75,11 +75,11 @@ if ($action == "getProjects") {
 	$scope = $_POST['scope'];
 	$pid = $_POST['pid'];
 	
-	file_put_contents("log.txt", "prefix: $prefix\nscope: $scope\npid: $pid\n");
+	// file_put_contents("log.txt", "prefix: $prefix\nscope: $scope\npid: $pid\n");
 	
 	$module = ExternalModules::getModuleInstance($prefix, $version);
 	$settings = $module->framework->getProjectSettings($pid);
-	file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($settings, true), FILE_APPEND);
+	// file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($settings, true), FILE_APPEND);
 	
 	$fields = [array_keys($settings)];	// $fields is the matrix starting at cell (1, 0) and goes to (n, n)
 	// file_put_contents("log.txt", "\nfields\n" . print_r($fields, true), FILE_APPEND);

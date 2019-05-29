@@ -1,5 +1,5 @@
 <?php
-file_put_contents("log.txt", "log start --\n");
+// file_put_contents("log.txt", "log start --\n");
 // file_put_contents("log.txt", "\$_POST:\n" . print_r($_POST, true) . "\n", FILE_APPEND);
 // file_put_contents("log.txt", "\$_FILES:\n" . print_r($_FILES, true) . "\n", FILE_APPEND);
 
@@ -39,7 +39,7 @@ $settings = [
 $prefix = $_POST['prefix'];
 $scope = $_POST['scope'];
 $pid = $_POST['pid'];
-define("NOAUTH", true);
+// define("NOAUTH", true);
 require_once("../../redcap_connect.php");
 use \ExternalModules\ExternalModules;
 $module = ExternalModules::getModuleInstance($prefix);
@@ -77,14 +77,14 @@ foreach ($csv[0] as $col => $fieldname) {
 	}
 }
 
-file_put_contents("log.txt", "\nsettings determined via imported file:\n" . print_r($settings, true), FILE_APPEND);
+// file_put_contents("log.txt", "\nsettings determined via imported file:\n" . print_r($settings, true), FILE_APPEND);
 
 // $module->framework->setProjectSettings($settings, $pid); // don't use this
 
 $results = [];
 foreach($settings as $fieldname => $setting) {
 	if (!empty($setting['system_value'])) {
-		if (ExternalModules::hasSystemSettingsSavePermission($prefix)) {
+		if (ExternalModules::hasSystemSettingsSavePermission()) {
 			$module->framework->setSystemSetting($fieldname, $setting['system_value']);
 			$results[] = "System setting '$fieldname' set.";
 		} else {
@@ -103,8 +103,8 @@ foreach($settings as $fieldname => $setting) {
 
 $newSettings = $module->framework->getProjectSettings($pid);
 
-file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($newSettings, true), FILE_APPEND);
-file_put_contents("log.txt", "\n\nimport finished", FILE_APPEND);
+// file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($newSettings, true), FILE_APPEND);
+// file_put_contents("log.txt", "\n\nimport finished", FILE_APPEND);
 
 exit(json_encode([
 	"message" => "Success! Settings imported to $prefix.",

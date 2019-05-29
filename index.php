@@ -15,7 +15,6 @@
 				<p>Modules enabled on this REDCap instance:</p>
 				<select id="moduleSelect">
 					<?php
-						define("NOAUTH", true);
 						require_once("../../redcap_connect.php");
 						use \ExternalModules\ExternalModules;
 						
