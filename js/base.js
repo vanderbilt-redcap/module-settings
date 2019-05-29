@@ -76,43 +76,37 @@ function exportCSV() {
 	window.location.href = "/redcap/plugins/module-settings/export.php?prefix=" + prefix + "&scope=" + scope + "&pid=" + pid;
 }
 
-$(function() {
-	$("#moduleSelect").change(function() {
-		let prefix = $(this).children("option:selected").val();
-		let scope = $("#scopeSelect").children("option:selected").val();
-		if (prefix == "") {
-			$("#actions").hide();
-			$("#projects").hide();
-			$("#projects select").html("");
-		} else {
-			getProjectOptions(prefix);
-			$("#projects").show();
-		}
-		$("#results").hide();
-	});
-	$("#scopeSelect").change(function() {
-		let scope = $(this).children("option:selected").val();
-		if (scope == "system") {
+function showHideOnSelectChange() {
+	let prefix = $("#moduleSelect").children("option:selected").val();
+	let scope = $("#scopeSelect").children("option:selected").val();
+	let pid = $("#projectSelect").children("option:selected").val();
+	$("#actions, #projects, #results").hide();
+	if (prefix != "") {
+		if (typeof(scope) !== 'undefined' && scope == "system") {
 			$("#actions").show();
-			$("#projects").hide();
 		} else {
-			let pid = $("#projectSelect").children("option:selected").val();
 			$("#projects").show();
-			if (pid == "" || pid == null) {
-				$("#actions").hide();
-			} else {
+			if (typeof(pid) !== 'undefined' && pid != "") {
 				$("#actions").show();
 			}
 		}
-		$("#results").hide();
-	});
-	$("#projectSelect").change(function() {
-		let pid = $(this).children("option:selected").val();
-		if (pid == "" || pid == null) {
-			$("#actions").hide();
+	}
+	return {
+		prefix: prefix,
+		scope: scope,
+		pid: pid
+	};
+}
+
+$(function() {
+	$("#moduleSelect").change(function() {
+		let info = showHideOnSelectChange();
+		if (info.prefix == "") {
+			$("#projects select").html("");
 		} else {
-			$("#actions").show();
+			getProjectOptions(info.prefix);
 		}
-		$("#results").hide();
 	});
+	$("#scopeSelect").change(showHideOnSelectChange);
+	$("#projectSelect").change(showHideOnSelectChange);
 })
