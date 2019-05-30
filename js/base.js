@@ -43,8 +43,8 @@ function importSettings() {
 		},
 		success : function(data) {
 			// console.log('ajax successful');
-			// console.log(data);
-			$("#results").html("<h2>Results</h2>");
+			console.log(data);
+			$("#results").html("");
 			if (typeof(data.results) !== 'undefined') {
 				let results = JSON.parse(data.results);
 				let html = "<h2>Results</h2>";

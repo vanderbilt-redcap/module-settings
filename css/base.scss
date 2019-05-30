@@ -12,29 +12,15 @@ body, div {
 }
 
 div {
-	width: 100%;
+	width: 50%;
 }
 
 div.row {
 	flex-direction: row;
 }
 
-#select {
-	padding-top: 3%;
-	padding-bottom: 5%;
-	div {
-		padding-bottom: 20px;
-	}
-}
-
-#import {
-	border-left: 1px solid black;
-}
-
-#results {
-	padding-top: 5%;
-	padding-bottom: 3%;
-	width: 70%;
+.card {
+	padding: 3%;
 }
 
 select {
