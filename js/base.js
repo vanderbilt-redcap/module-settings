@@ -53,7 +53,6 @@ function importSettings() {
 					html += element + "\n";
 				});
 				html += "</pre>";
-				// $("#results").html("<h2>Results</h2>\n" + "<pre>" + results + "</pre>");
 				$("#results").html(html);
 				$("#results").show();
 			} else {
@@ -73,7 +72,7 @@ function exportCSV() {
 	let scope = $("#scopeSelect").children("option:selected").val();
 	let pid = $("#projectSelect").children("option:selected").val();
 	
-	window.location.href = "/redcap/plugins/module-settings/export.php?prefix=" + prefix + "&scope=" + scope + "&pid=" + pid;
+	window.location.href = "export.php?prefix=" + prefix + "&scope=" + scope;
 }
 
 function showHideOnSelectChange() {

@@ -101,7 +101,7 @@ foreach($settings as $fieldname => $setting) {
 	}
 }
 
-$newSettings = $module->framework->getProjectSettings($pid);
+// $newSettings = $module->framework->getProjectSettings($pid);
 
 // file_put_contents("log.txt", "\ngetProjectSettings\n" . print_r($newSettings, true), FILE_APPEND);
 // file_put_contents("log.txt", "\n\nimport finished", FILE_APPEND);
