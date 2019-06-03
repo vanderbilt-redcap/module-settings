@@ -17,4 +17,4 @@ Sample export and interface : ![Plugin interface with export button shown](/docs
 
 Upon importing a settings file, the plugin will generate a list describing which settings were successfully changed or if you do not have the permissions necessary to make those settings change.
 
-![Plugin example of results panel](/docs/results_example.PNG)
+Example results panel : ![Plugin example of results panel](/docs/results_example.PNG)
